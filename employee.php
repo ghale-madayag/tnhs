@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Users | TNHS</title>
+  <title>Employee | TNHS</title>
   <?php include_once('inc/header.php')?>
 </head>
 <body class="hold-transition sidebar-mini skin-red">
@@ -13,8 +13,8 @@
     <div class="content-wrapper">
       <section class="content-header">
        <h1>
-          Registered Users
-          <small>it all starts here</small>
+          Employee
+          <small>List</small>
         </h1>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -35,8 +35,8 @@
             </div>
           </div>
           <div class="box-body">
-            <form id="form-pl-all" class="form-horizontal" enctype="multipart/form-data" method="post">
-                <table id="pl-all" class="table table-striped pl-all" cellspacing="0" width="100%">
+            <form id="form-emp-all" class="form-horizontal" enctype="multipart/form-data" method="post">
+                <table id="emp-all" class="table table-striped emp-all" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th width="5"><div style="display: none;"><input type="checkbox" id="select-all"><label for="select-all"></label></div></th>
@@ -67,18 +67,18 @@
                     <h4 class="modal-title">Register user</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal" id="form-pl" enctype="multipart/form-data" method="post">
+                    <form class="form-horizontal" id="form-emp" enctype="multipart/form-data" method="post">
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="emp_id" class="col-sm-4 control-label">Employee No. / T.I.N. :</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_id" name="emp_id" placeholder="Employee No. / T.I.N." required>
+                                    <input type="text" class="form-control" id="emp_id" name="emp_id" placeholder="Employee No. / T.I.N." >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="emp_fname" class="col-sm-4 control-label">First name:</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_fname" name="emp_fname" placeholder="First name" required>
+                                    <input type="text" class="form-control" id="emp_fname" name="emp_fname" placeholder="First name" >
                                 </div>
                             </div>
                             <div class="form-group">
@@ -90,7 +90,7 @@
                             <div class="form-group">
                                 <label for="emp_lname" class="col-sm-4 control-label">Last name:</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_lname" name="emp_lname" placeholder="Last name" required>
+                                    <input type="text" class="form-control" id="emp_lname" name="emp_lname" placeholder="Last name" >
                                 </div>
                             </div>
                             <div class="form-group">
@@ -98,11 +98,11 @@
                                 <div class="col-sm-8">
                                     <div class="radio">
                                         <label>
-                                        <input type="radio" name="emp_sex" id="emp_sex" value="M" checked="">
+                                        <input type="radio" name="emp_sex" id="emp_sex_m" value="M" checked="">
                                         Male
                                         </label>
                                         <label>
-                                        &nbsp; <input type="radio" name="emp_sex" id="emp_sex" value="F">
+                                        &nbsp; <input type="radio" name="emp_sex" id="emp_sex_f" value="F">
                                         Female 
                                         </label>
                                     </div>
@@ -111,19 +111,13 @@
                             <div class="form-group">
                                 <label for="emp_fund" class="col-sm-4 control-label">Fund Source:</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_fund" name="emp_fund" placeholder="Fund Source" required>
+                                    <input type="text" class="form-control" id="emp_fund" name="emp_fund" placeholder="Fund Source" >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="emp_position" class="col-sm-4 control-label">Position/Designation:</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_position" name="emp_position" placeholder="Position/Designation" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="emp_position" class="col-sm-4 control-label">Position/Designation:</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_position" name="emp_position" placeholder="Position/Designation" required>
+                                    <input type="text" class="form-control" id="emp_position" name="emp_position" placeholder="Position/Designation" >
                                 </div>
                             </div>
                             <div class="form-group">
@@ -148,19 +142,19 @@
                             <div class="form-group">
                                 <label for="emp_degree" class="col-sm-4 control-label">Degree/ Postgraduate:</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_degree" name="emp_degree" placeholder="Degree/ Postgraduate" required>
+                                    <input type="text" class="form-control" id="emp_degree" name="emp_degree" placeholder="Degree/ Postgraduate" >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="emp_major" class="col-sm-4 control-label">Major/ Specialization:</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_major" name="emp_major" placeholder="Major/ Specialization" required>
+                                    <input type="text" class="form-control" id="emp_major" name="emp_major" placeholder="Major/ Specialization" >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="emp_minor" class="col-sm-4 control-label">Minor:</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="emp_minor" name="emp_minor" placeholder="Minor" required>
+                                    <input type="text" class="form-control" id="emp_minor" name="emp_minor" placeholder="Minor" >
                                 </div>
                             </div>
                             <div class="form-group">
@@ -184,19 +178,19 @@
                                 <div class="form-group">
                                     <label for="emp_section" class="col-sm-4 control-label">Subject:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="emp_subject" name="emp_subject" placeholder="Subject" required>
+                                        <input type="text" class="form-control" id="emp_subject" name="emp_subject" placeholder="Subject" >
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="emp_section" class="col-sm-4 control-label">Grade and Section:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="emp_section" name="emp_section" placeholder="Grade and Section" required>
+                                        <input type="text" class="form-control" id="emp_section" name="emp_section" placeholder="Grade and Section" >
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="emp_day" class="col-sm-4 control-label">Day:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="emp_day" name="emp_day" placeholder="M/T/W/TH/F" required>
+                                        <input type="text" class="form-control" id="emp_day" name="emp_day" placeholder="M/T/W/TH/F" >
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -242,9 +236,9 @@
 <?php include_once('inc/script.php'); ?>
 <script src="dist/js/jquery-toast-plugin-master/dist/jquery.toast.min.js"></script>
 <script src="dist/js/toast.js"></script>
-<script src="dist/js/pl.js"></script>
+<script src="dist/js/employee.js"></script>
 <script>
-    getAllPL();
+    getAllEmp();
     $(function () {
     //Enable iCheck plugin for checkboxes
     //iCheck for checkbox and radio inputs

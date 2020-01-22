@@ -1,31 +1,32 @@
 $(document).ready(function(){
-    $("form#form-pl").on('submit', function(e){
+    $("form#form-emp").on('submit', function(e){
         var formData = new FormData($(this)[0]);
         $.ajax({
             type: "POST",
-            url: "data/pl-handler.php",
+            url: "data/employee-handler.php",
             data: formData,
             cache: false,
             async: false,
             processData: false,
             contentType: false,
             success: function(data){
-                if (data==1) {
-                    refresh('pl-all');
-                    $("input[type=text],input[type=number]").val("");
-                    toastSuccess("Successfully Registered", "You added new data");
-                    $("#addEvent").modal('hide');
-                }
+                console.log(data)
+                // if (data==1) {
+                //     refresh('emp-all');
+                //     $("input[type=text],input[type=number]").val("");
+                //     toastSuccess("Successfully Registered", "You added new data");
+                //     $("#addEvent").modal('hide');
+                // }
             }
         })
         e.preventDefault();
     })
 
-    $("form#form-pl-edit").on('submit', function(e){
+    $("form#form-emp-edit").on('submit', function(e){
         var formData = new FormData($(this)[0]);
         $.ajax({
             type: "POST",
-            url: "data/pl-handler.php",
+            url: "data/employee-handler.php",
             data: formData,
             cache: false,
             async: false,
@@ -33,7 +34,7 @@ $(document).ready(function(){
             contentType: false,
             success: function(data){
                 if (data==1) {
-                    refresh('pl-all');
+                    refresh('emp-all');
                     toastSuccess("Successfully Updated", "You update the data");
                     $("#editEvent").modal('hide');
                 }
@@ -54,7 +55,7 @@ $(document).ready(function(){
                 var formData = $(this).val();
                 $.ajax({
                     type: "POST",
-                    url:"data/pl-handler.php",
+                    url:"data/employee-handler.php",
                     data: "get_pl="+formData,
                     cache:false,
                     success: function(data){
@@ -100,9 +101,9 @@ $(document).ready(function(){
     })
 })
 
-function getAllPL() {
+function getAllEmp() {
     
-    var table = $('#pl-all').DataTable( {
+    var table = $('#emp-all').DataTable( {
         "dom": '<"toolbar">Bfrtip',
         "lengthChange": false,
 		"ordering": false,
@@ -117,7 +118,7 @@ function getAllPL() {
             "emptyTable":     "No client available"
         },
         "ajax": {
-            "url": "data/pl-handler.php",
+            "url": "data/employee-handler.php",
             "dataSrc": ""
         },
          "columns": [
@@ -157,7 +158,7 @@ function getAllPL() {
          '<div class="btn-group">'+
             '<button type="button" class="btn btn-default btn-sm" id="del" title="Delete"><i class="fa fa-trash"></i> Delete</button>'+
             '<button type="button" class="btn btn-default btn-sm" id="edit" title="Edit"><i class="fa fa-edit"></i> Edit</button>'+
-			'<button type="button" class="btn btn-default btn-sm" title="Add" data-toggle="modal" data-target="#addEvent"><i class="fa fa-plus"></i> Add User</button>'+
+			'<button type="button" class="btn btn-default btn-sm" title="Add" data-toggle="modal" data-target="#addEvent"><i class="fa fa-plus"></i> Add</button>'+
             '</div>'+
         '</div>');
 

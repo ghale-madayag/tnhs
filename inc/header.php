@@ -14,6 +14,8 @@
 <link rel="stylesheet" type="text/css" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 <!-- Google Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-<link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+<link rel="stylesheet" href="plugins/iCheck/all.css">
 <link rel="stylesheet" href="dist/js/jquery-toast-plugin-master/dist/jquery.toast.min.css">
 <link rel="stylesheet" href="dist/css/custom.css">
+<link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+

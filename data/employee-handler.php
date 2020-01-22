@@ -31,33 +31,25 @@
         }
 
         echo json_encode($result);
-    }else if(isset($_POST['title'])){
-        $sql = $handler->prepare("INSERT INTO newprivatelesson_2017(
-            `school_id`,
-            `privatelessonday`,
-            `privatelessontime`,
-            `price`,
-            `max_student`,
-            `orderlist`,
-            `created`,
-            `modified`
+    }else if(isset($_POST['emp_id'])){
+        $sql = $handler->prepare("INSERT INTO employee(
+            `emp_no`,
+            `emp_fname`,
+            `emp_mname`,
+            `emp_lname`
         ) 
         VALUES(
-            :school,
-            :title,
-            :tim,
-            88,
-            1,
-            :list,
-            now(),
-            now()
+            :emp_id,
+            :emp_fname,
+            :emp_mname,
+            :emp_lname
         )");
 
         $sql->execute(array(
-            'school' => isset($_POST['school']) ? $_POST['school'] : null,
-            'title' => isset($_POST['title']) ? $_POST['title'] : null,
-            'tim' => isset($_POST['time']) ? $_POST['time'] : null,
-            'list' => isset($_POST['list']) ? $_POST['list'] : null
+            'emp_id' => isset($_POST['emp_id']) ? $_POST['emp_id'] : null,
+            'emp_fname' => isset($_POST['emp_fname']) ? $_POST['emp_fname'] : null,
+            'emp_mname' => isset($_POST['emp_mname']) ? $_POST['emp_mname'] : null,
+            'emp_lname' => isset($_POST['emp_lname']) ? $_POST['emp_lname'] : null
         ));
 
         echo 1;

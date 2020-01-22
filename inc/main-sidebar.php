@@ -20,9 +20,27 @@
         </a>
     </li>
     <li>
-        <a href="users.php">
-        <i class="fa fa-users"></i>
-        <span>Users</span>
+        <a href="sf1.php">
+            <i class="fa fa-circle"></i>
+            <span>SF-1</span>
+        </a>
+    </li>
+    <li>
+        <a href="sf2.php">
+            <i class="fa fa-circle"></i>
+            <span>SF-2</span>
+        </a>
+    </li>
+    <li>
+        <a href="employee.php">
+            <i class="fa fa-circle"></i>
+            <span>SF-7</span>
+        </a>
+    </li>
+    <li>
+        <a href="student.php">
+            <i class="fa fa-circle"></i>
+            <span>SF-10</span>
         </a>
     </li>
 </ul>
