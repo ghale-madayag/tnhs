@@ -39,12 +39,17 @@
       <!-- /.col -->
     </div>
     <div class="table-responsive">
-        <table class="table sf-print" style="font-size:14px;" border="1">
+        <table class="table sf-print" style="font-size:12px;" border="1">
         <tr>
             <td rowspan="3">No.</td>
             <td rowspan="3">NAME <br>(Last Name, First Name, Name Extension, Middle Name)</td>
             <td colspan="31">Date</td>
             <td rowspan="2" colspan="2">Total for the month</td>
+            <td rowspan="3"><b>REMARKS</b><br>
+              <span class="tiny">1. If No Longer in School (NLS), state reason, please refer to legend number. 
+              2. If TRANSFERRED IN/OUT, write the name of School. 3. If SHIFTING IN/OUT, write the name of Track/Strand/Program).
+              </span>
+              </td>
         </tr>
         <tr>
             <td></td>
@@ -116,8 +121,212 @@
         </tr>
         <section id="sf2_result">
             
-        </section>  
+        </section>
     </table>
+    </div>
+    <div class="row printFoot">
+      <!-- accepted payments column -->
+      <div class="col-xs-6">
+        <p>GUIDLINES:</p>
+        <p>1. The attendance shall be accomplished daily. Refer to the codes for checking learners' attendance<br>
+        2. To compute the following:
+      </p>
+        <div class="col-xs-5">
+          <p>a. Percentage of Enrolment = </p><br>
+          <p>b. Average Daily Attendance = </p><br>
+          <p>c. Percentage of Attendance for the month =</p>
+        </div>
+        <div class="col-xs-5 conUnderline">
+          Registered Lerners as of end of the month<hr>Enrolment as of 1st friday of the school year<br>
+          Total Daily Attendance<hr>Number of School Days in reporting month<br>
+          Average daily attendance<hr>Registered Learners as of end of the month
+        </div>
+        <div class="col-xs-2">
+          <p>x 100</p><br>
+          <p>x 100</p><br>
+          <p>x 100</p>
+        </div>
+        <p>
+          3. Every end of the month, the Class Adviser will submit this form to the Office of the Principal for recording of summary table into School Form 4. Once signed by the School Head, this form should be returned to the Class Adviser.<br>
+          4. The Class Adviser will provide neccessary interventions including but not limited to home visitation to learner/s who were absent for 5 consecutive days and/or those at risk of dropping out.<br>
+          5.  Attendance performance of learners will be reflected in the SF9-SHS of every grading period.
+        </p>
+      </div>
+      <!-- /.col -->
+      <div class="col-xs-6">
+      <div class="col-xs-6 footBorder">
+        <p><strong>1. CODES FOR CHECKING ATTENDANCE</strong><br>
+        (blank) - Present; (x) - Absent; Tardy (half shaded = Upper for Late Comer, Lower for Cutting Classes)												
+        </p>
+        <p><strong>2. REASONS/CAUSES FOR NO LONGER IN SCHOOL (NLS)</strong></p>
+        <p><strong>a. Domestic-Related Factors</strong><br>
+        a.1. Had to take care of siblings<br>
+        a.2. Early marriage/pregnancy<br>
+        a.3. Parents' attitude toward schooling<br>
+        a.4. Family problems
+        </p>
+        <p><strong>b. Individual-Related Factors</strong><br>
+        b.1. Illness<br>
+        b.2. Overage<br>
+        b.4. Drug Abuse<br>
+        b.5. Poor Academic Performance<br>
+        b.6. Lack of Interest/Distractions<br>
+        b.7. Hunger/Malnutrition
+        </p>
+        <p><strong>c. School-Related Factors</strong><br>
+        c.1. Teacher Factor<br>
+        c.2. Physical Condition of Classroom<br>
+        c.3. Peer Influence
+        </p>
+        <p><strong>d. Geographic/Environmental</strong><br>
+        d.1. Distance between home and school <br>
+        d.2. Armed conflict (incl. tribal wars & clan feuds) <br>
+        d.3. Calamities/Disasters
+        </p>
+        <p><strong>e. Financial-Related</strong><br>
+        e.1. Child labor, work
+        </p>
+        <p><strong>f. Others (Specify)</strong><br>
+        a. Death <br>
+        b. Transferred to School Abroad <br>
+        c. Transferred to International School <br>
+        d. Transferred to ALS
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <div class="table-responsive">
+          <table border="1" class="sideFooter">
+            <tbody>
+              <tr>
+                <td>Month:</td>
+                <td>No. of Days of Classes:</td>
+                <td colspan="3" style="text-align: center">Summary</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>M</td>
+                <td>F</td>
+                <td>TOTAL</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                 <i>* Enrolment  (as of 1st Friday of the semester)</i> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                 <i>Late Enrolment during the month (beyond cut-off)</i> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                <i>Registered Learners as of end of the month</i> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                <i>Percentage of Enrolment as of end of the month</i> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                <i>Average Daily Attendance</i> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                <i>Percentage of Attendance for the month</i> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                <i>Number of students absent for 5 consecutive days</i> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                <i>Number of students absent for 5 consecutive days</i> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                 <strong>No Longer in School (NLS)</strong> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                 <strong>Transferred Out</strong> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                 <strong>Transferred In</strong> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                 <strong>Shifting Out</strong> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                 <strong>Shifting In</strong> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+        <p>
+        I certify that this report is true and correct:
+        </p> <br>
+
+        <p><hr><center>Signature of Class Adviser over Printed Name</center></p> <br>
+        <p>Attested By:</p> <br>
+        <p><hr><center>Signature of School Head over Printed Name</center></p> <br>
+        </div>
+      </div>
+      </div>
+      <!-- /.col -->
     </div>
     <!-- /.row -->
     <!-- /.row -->

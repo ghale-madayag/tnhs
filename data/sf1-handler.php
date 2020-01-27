@@ -58,7 +58,7 @@
 
         echo 1;
     }else{
-        $sql = $handler->query('SELECT * FROM tnsh_sf1');
+        $sql = $handler->query('SELECT * FROM tnsh_sf1 ORDER BY sf1_lname ASC');
         while ($row = $sql->fetch(PDO::FETCH_OBJ)) {
             $dateCre = date_create($row->sf1_indate);
             $date = date_format($dateCre, 'm/d/Y');

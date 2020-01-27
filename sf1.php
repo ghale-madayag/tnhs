@@ -140,9 +140,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="sf1_add_line" class="col-sm-4 control-label">House No./Street/Sitio/Purok:</label>
+                                <label for="sf1_add_line" class="col-sm-4 control-label">Complete Address:</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control"  placeholder="House No./Street/Sitio/Purok" name="sf1_add_line" id="sf1_add_line">
+                                    <input type="text" class="form-control"  placeholder="Complete Address" name="sf1_add_line" id="sf1_add_line">
                                 </div>
                             </div>
                             <div class="form-group">

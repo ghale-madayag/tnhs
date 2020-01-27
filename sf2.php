@@ -39,7 +39,6 @@
                 <table id="sf2-all" class="table table-striped sf2-all display nowrap" cellspacing="0" width="100%">
                     <thead>
                         <tr>
-                            <th width="5"><div style="display: none;"><input type="checkbox" id="select-all"><label for="select-all"></label></div></th>
                             <th>LRN</th>
                             <th>Name</th>
                             <th>Date Created</th>
