@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SF 2 | TNHS</title>
+  <title>SF 3 | TNHS</title>
   <?php include_once('inc/header.php')?>
 </head>
 <body class="hold-transition sidebar-mini skin-red">
@@ -13,12 +13,12 @@
     <div class="content-wrapper">
       <section class="content-header">
        <h1>
-          School Form 2
+          School Form 3
           <small>List</small>
         </h1>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">School Form 2</li>
+          <li class="active">School Form 3</li>
         </ol>
     </section>
     <section class="content">
@@ -35,14 +35,15 @@
             </div>
           </div>
           <div class="box-body">
-            <form id="form-sf2-all" class="form-horizontal" enctype="multipart/form-data" method="post">
-                <table id="sf2-all" class="display nowrap table table-hover sf2-all" style="width:100%">
+            <form id="form-sf3-all" class="form-horizontal" enctype="multipart/form-data" method="post">
+                <table id="sf3-all" class="display nowrap table table-hover sf3-all" style="width:100%">
                     <thead>
                         <tr>
                             <th width="5"><div style="display: none;"><input type="checkbox" id="select-all"><label for="select-all"></label></div></th>
-                            <th>Month</th>
-                            <th>School Year</th>
-                            <th>Date Created</th>
+                            <th>Name	</th>
+                            <th>Book / ModuleTitle	</th>
+                            <th>Date Issued</th>
+                            <th>Date Returned</th>
                         </tr>
                     </thead>
                 </table>
@@ -62,49 +63,40 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">School Form 2</h4>
+                    <h4 class="modal-title">School Form 3</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal" id="form-sf2" enctype="multipart/form-data" method="post">
+                    <form class="form-horizontal" id="form-sf3" enctype="multipart/form-data" method="post">
                         <div class="box-body">
-                            <!-- <div class="form-group">
-                                <label for="sf1_lrn" class="col-sm-4 control-label">Section:</label>
-                                <div class="col-sm-8">
-                                  <select id="section" style="width:100%;" class="form-control select2" name="section" placeholder="Search..."></select>    
-                                </div>
-                            </div> -->
                             <div class="form-group">
-                                <label for="month" class="col-sm-4 control-label">Month:</label>
+                                <label for="fullname" class="col-sm-4 control-label">Name:</label>
                                 <div class="col-sm-8">
-                                    <input type="hidden" value="1" name="section" id="section"/>
-                                    <select class="form-control" id="month" name="month" placeholder="Month" >
-                                        <option disabled selected value="">Select Month</option>
-                                        <option value="January">January</option>
-                                        <option value="February">February</option>
-                                        <option value="March">March</option>
-                                        <option value="April">April</option>
-                                        <option value="May">May</option>
-                                        <option value="June">June</option>
-                                        <option value="July">July</option>
-                                        <option value="August">August</option>
-                                        <option value="September">September</option>
-                                        <option value="October">October</option>
-                                        <option value="November">November</option>
-                                        <option value="December">December</option>
-                                    </select>
+                                  <select id="fullname" style="width:100%;" class="form-control select2" name="fullname" placeholder="School Year"></select>    
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="sy" class="col-sm-4 control-label">School Year:</label>
+                                <label for="title" class="col-sm-4 control-label">Book Title:</label>
                                 <div class="col-sm-8">
-                                    <select id="sy" style="width:100%;" class="form-control select2" name="sy" placeholder="School Year"></select>    
+                                    <input type="text" id="title" name="title" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="date_issued" class="col-sm-4 control-label">Date Issued:</label>
+                                <div class="col-sm-8">
+                                    <input type="text" id="date_issued" name="date_issued" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="date_returned" class="col-sm-4 control-label">Date Returned:</label>
+                                <div class="col-sm-8">
+                                    <input type="text" id="date_returned" name="date_returned" class="form-control">
                                 </div>
                             </div>
                         </div>
                     </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Gerenate</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </form>
             </div><!-- /.modal-content -->
@@ -116,22 +108,28 @@
 <?php include_once('inc/script.php'); ?>
 <script src="dist/js/jquery-toast-plugin-master/dist/jquery.toast.min.js"></script>
 <script src="dist/js/toast.js"></script>
-<script src="dist/js/sf2.js"></script>
+<script src="dist/js/sf3.js"></script>
 <script>
     $(function () {
     //Enable iCheck plugin for checkboxes
     //iCheck for checkbox and radio inputs
-   
+    $('#date_issued').datepicker({
+        autoclose: true
+    })
+
+    $('#date_returned').datepicker({
+        autoclose: true
+    })
     //Enable check and uncheck all functionality
     $(".checkbox-toggle").click(function () {
       var clicks = $(this).data('clicks');
       if (clicks) {
         //Uncheck all checkboxes
-        $(".sf2-all input[type='checkbox']").iCheck("uncheck");
+        $(".sf3-all input[type='checkbox']").iCheck("uncheck");
         $(".fa", this).removeClass("fa-check-square-o").addClass('fa-square-o');
       } else {
         //Check all checkboxes
-        $(".sf2-all input[type='checkbox']").iCheck("check");
+        $(".sf3-all input[type='checkbox']").iCheck("check");
         $(".fa", this).removeClass("fa-square-o").addClass('fa-check-square-o');
       }
       $(this).data("clicks", !clicks);

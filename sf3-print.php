@@ -39,7 +39,7 @@
         <table class="table tb-header">
           <tr>
             <td><img src="dist/img/DepED-emblem.png" alt="" width="70" class="pull-left"></td>
-            <td class="text-center" colspan="2"><h4>School Form 2 Daily Attendance Report of Learners  for Senior High School (SF2-SHS)</h4></td>
+            <td class="text-center" colspan="2"><h4> School Form 3 Books Issued and Returned for Senior High School (SF3-SHS) </h4></td>
             <td><img src="dist/img/DepED-Logo.png" alt="" width="100" class="pull-right"></td>
           </tr>
           <tr class="tb-head-info">
@@ -87,71 +87,69 @@
         </table>
         <table class="table sf-print" style="font-size:8px;">
         <tr>
-            <td rowspan="3">No.</td>
-            <td rowspan="3">NAME <br>(Last Name, First Name, Name Extension, Middle Name)</td>
-            <td colspan="25">Date</td>
-            <td rowspan="2" colspan="2">Total for the month</td>
-            <td rowspan="3"><b>REMARKS</b><br>
+            <td rowspan="4">No.</td>
+            <td rowspan="4">NAME <br>(Last Name, First Name, Name Extension, Middle Name)</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td colspan="2">Book / ModuleTitle</td>
+            <td rowspan="4"><b>REMARKS</b><br>
               <span class="tiny">1. If No Longer in School (NLS), state reason, please refer to legend number. 
               2. If TRANSFERRED IN/OUT, write the name of School. 3. If SHIFTING IN/OUT, write the name of Track/Strand/Program).
               </span>
               </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
         </tr>
         <tr>
-            <td>M</td>
-            <td>T</td>
-            <td>W</td>
-            <td>TH</td>
-            <td>F</td>
-            <td>M</td>
-            <td>T</td>
-            <td>W</td>
-            <td>TH</td>
-            <td>F</td>
-            <td>M</td>
-            <td>T</td>
-            <td>W</td>
-            <td>TH</td>
-            <td>F</td>
-            <td>M</td>
-            <td>T</td>
-            <td>W</td>
-            <td>TH</td>
-            <td>F</td>
-            <td>M</td>
-            <td>T</td>
-            <td>W</td>
-            <td>TH</td>
-            <td>F</td>
-            <td>ABSENT</td>
-            <td>TARDY</td> 
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+            <td colspan="2">Date (mm/dd/yy)</td>
+        </tr>
+        <tr>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
+            <td>Issued</td>
+            <td>Returned</td>
         </tr>
         <section id="sf2_result">
             
@@ -375,5 +373,5 @@
 <script src="bower_components/select2/dist/js/select2.full.min.js"></script>
 <script src="dist/js/aes.js"></script>
 <script src="dist/js/toast.js"></script>
-<script type="text/javascript" src="dist/js/sf2-print.js"></script>
+<script type="text/javascript" src="dist/js/sf3-print.js"></script>
 </html>

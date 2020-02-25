@@ -37,3 +37,50 @@ table.sideFooter tr td{
     border: 1px solid #000;
     padding:8px 10px;
 }
+
+.sf2-all input[type="text"] {
+    width: 25px;
+    text-align: center;
+}
+
+.sf2-all-view th.sorting_disabled {
+    text-align: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 22px !important;
+}
+
+.invoice h4.page-header {
+    text-align: center;
+    font-size:18px;
+    font-weight:bold;
+    border-bottom:none;
+    /* margin-bottom: 18px; */
+}
+
+.printHead {
+    margin-bottom: -10px;
+}
+
+.invoice-info dl.dl-horizontal {
+    font-size: 10px;
+    /* line-height: 5; */
+    /* margin-bottom: 10px; */
+}
+
+body .invoice {font-family: "Arial Narrow";}
+
+.invoice .dl-horizontal dd {margin-bottom: 4px;}
+
+.invoice .table>tbody>tr>td {
+    border-top: 0px;
+}
+
+tr.tb-head-info {
+    font-size: 10px;
+}
+
+.invoice dl.dl-horizontal {
+    margin-bottom: -12px;
+}

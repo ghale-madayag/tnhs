@@ -18,4 +18,5 @@
 <link rel="stylesheet" href="dist/js/jquery-toast-plugin-master/dist/jquery.toast.min.css">
 <link rel="stylesheet" href="dist/css/custom.css">
 <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="bower_components/select2/dist/css/select2.css">
 

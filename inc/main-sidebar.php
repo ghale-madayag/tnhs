@@ -32,6 +32,12 @@
         </a>
     </li>
     <li>
+        <a href="sf3.php">
+            <i class="fa fa-circle"></i>
+            <span>SF-3</span>
+        </a>
+    </li>
+    <li>
         <a href="employee.php">
             <i class="fa fa-circle"></i>
             <span>SF-7</span>

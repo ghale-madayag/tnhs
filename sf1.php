@@ -80,6 +80,7 @@
                                 <label for="sf1_lrn" class="col-sm-4 control-label">LRN :</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="sf1_lrn" name="sf1_lrn" placeholder="LRN" >
+                                    <input type="hidden" class="form-control" id="sec_id" name="sec_id" value="1">
                                 </div>
                             </div>
                             <div class="form-group">
