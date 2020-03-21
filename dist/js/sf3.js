@@ -1,6 +1,7 @@
 $(document).ready(function(){
-    getAllSf3(); 
+    //getAllSf3(); 
     getFullname();
+    getSy();
 
     $("form#form-sf3").on('submit', function(e){
         var formData = new FormData($(this)[0]);
@@ -119,3 +120,4 @@ function getFullname() {
 		}
 	});
 }
+

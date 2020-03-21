@@ -159,27 +159,3 @@ function getSection() {
 		}
 	});
 }
-
-function getSy() {
-
-	$('#sy').select2({
-		width: 'resolve',
-		placeholder: "Select Year..",
-		allowHtml: true,
-		allowClear: false,
-		tags: true,
-		ajax: {
-			url: 'data/sy-search.php',
-			dataType: 'json',
-			quietMillis: 100,
-			processResults: function (data) {
-				return {
-					results: $.map(data, function (obj) {
-						return { id: obj.sy_id, text: obj.sy_name };
-					})
-				};
-
-			}
-		}
-	});
-}
