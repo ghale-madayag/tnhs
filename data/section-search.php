@@ -13,7 +13,7 @@
 		
 		$result[] = array(
 			'sec_id' => $row->sec_id ,
-			'sec_name' => $row->sec_name 
+			'sec_name' => strtoupper($row->sec_name)
 		);
 	}
     echo json_encode($result);

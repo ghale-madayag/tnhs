@@ -90,6 +90,7 @@
 
         $female = $handler->query('SELECT * FROM tnhs_sf1 WHERE sf1_sex = "F" ORDER BY sf1_lname ASC ');
 
+        $result = "";
         while ($row = $female->fetch(PDO::FETCH_OBJ)) {
             $dateCre = date_create($row->sf1_indate);
             $date = date_format($dateCre, 'm/d/Y');

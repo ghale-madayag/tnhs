@@ -1,5 +1,6 @@
 $(document).ready(function(){
     //getAllSf3(); 
+    getAllSfView(3);
     getFullname();
     getSy();
 
@@ -26,6 +27,42 @@ $(document).ready(function(){
         })
         e.preventDefault();
     })
+
+    $("#view").on('click', function(){
+        var len = $("input[name='selectVal']:checked").length;
+
+        if(len==0){
+            alert('Please select data');
+        }else if(len>1){
+            alert('Please select only one data');
+        }else{
+            $.each($("input[name='selectVal']:checked"), function(){
+                var formData = $(this).val();
+                var mon = $(this).data('rec'); 
+                var encryptedAES = CryptoJS.AES.encrypt(formData, "My Secret Passphrase");
+                var encryptedMon = CryptoJS.AES.encrypt(mon, "My Secret Passphrase");
+                window.location.replace('sf3-view.php?sec='+encryptedAES+'&month='+encryptedMon);
+            });
+        }
+    });
+
+    $('#export').click(function(){ 
+        var len = $("input[name='selectVal']:checked").length;
+
+        if(len==0){
+            alert('Please select data');
+        }else if(len>1){
+            alert('Please select only one data');
+        }else{
+            $.each($("input[name='selectVal']:checked"), function(){
+                var formData = $(this).val();
+                var mon = $(this).data('rec'); 
+                var encryptedAES = CryptoJS.AES.encrypt(formData, "My Secret Passphrase");
+                var encryptedMon = CryptoJS.AES.encrypt(mon, "My Secret Passphrase");
+                window.open('sf3-print.php?sec='+encryptedAES+'&month='+encryptedMon,'_blank');
+            });
+        }
+    });
 })
 
 function getAllSf3(){
@@ -82,7 +119,7 @@ function getAllSf3(){
             '<button type="button" class="btn btn-default btn-sm" id="del" title="Delete"><i class="fa fa-trash"></i> Delete</button>'+
             '<button type="button" class="btn btn-default btn-sm" id="edit" title="Edit"><i class="fa fa-edit"></i> Edit</button>'+
             '<button type="button" class="btn btn-default btn-sm" title="Generate" data-toggle="modal" data-target="#addEvent"><i class="fa fa-plus"></i> Add</button>'+
-            '<button type="button" class="btn btn-default btn-sm" id="view" title="View"><i class="fa fa-eye"></i> View</button>'+
+            '<button type="button" class="btn btn-default btn-sm" id="views" title="View"><i class="fa fa-eye"></i> View</button>'+
             '<button type="button" class="btn btn-default btn-sm" id="export" title="Export"><i class="fa fa-print"></i> Print</button>'+
             '</div>'+
         '</div>');
@@ -94,30 +131,8 @@ function getAllSf3(){
         var data = table.$("input").serialize();
         saveRow(data);
     });
+
+    
 }
 
-
-function getFullname() {
-
-	$('#fullname').select2({
-		width: 'resolve',
-		placeholder: "Select Student..",
-		allowHtml: true,
-		allowClear: true,
-		tags: false,
-		ajax: {
-			url: 'data/getname-search.php',
-			dataType: 'json',
-			quietMillis: 100,
-			processResults: function (data) {
-				return {
-					results: $.map(data, function (obj) {
-						return { id: obj.sf1_lrn, text: obj.sf1_fullname };
-					})
-				};
-
-			}
-		}
-	});
-}
 

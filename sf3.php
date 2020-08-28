@@ -113,7 +113,6 @@
 <script src="dist/js/sf3.js"></script>
 <script>
     $(function () {
-      getAllSfView(3);
     //Enable iCheck plugin for checkboxes
     //iCheck for checkbox and radio inputs
     $('#date_issued').datepicker({

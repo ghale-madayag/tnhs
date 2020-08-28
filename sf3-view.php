@@ -108,7 +108,7 @@
 <?php include_once('inc/script.php'); ?>
 <script src="dist/js/jquery-toast-plugin-master/dist/jquery.toast.min.js"></script>
 <script src="dist/js/toast.js"></script>
-<script src="dist/js/sf3.js"></script>
+<script src="dist/js/sf3-view.js"></script>
 <script>
     $(function () {
     //Enable iCheck plugin for checkboxes

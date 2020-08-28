@@ -136,26 +136,4 @@ function getAllSf2View() {
     });
 }
 
-function getSection() {
 
-	$('#section').select2({
-		width: 'resolve',
-		placeholder: "Select Section..",
-		allowHtml: true,
-		allowClear: false,
-		tags: true,
-		ajax: {
-			url: 'data/section-search.php',
-			dataType: 'json',
-			quietMillis: 100,
-			processResults: function (data) {
-				return {
-					results: $.map(data, function (obj) {
-						return { id: obj.sec_id, text: obj.sec_name };
-					})
-				};
-
-			}
-		}
-	});
-}

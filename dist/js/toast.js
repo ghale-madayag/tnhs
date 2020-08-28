@@ -163,3 +163,51 @@ function getSy() {
 		}
 	});
 }
+
+function getSection() {
+
+	$('#section').select2({
+		width: 'resolve',
+		placeholder: "Select Section..",
+		allowHtml: true,
+		allowClear: false,
+		tags: true,
+		ajax: {
+			url: 'data/section-search.php',
+			dataType: 'json',
+			quietMillis: 100,
+			processResults: function (data) {
+				return {
+					results: $.map(data, function (obj) {
+						return { id: obj.sec_id, text: obj.sec_name };
+					})
+				};
+
+			}
+		}
+	});
+}
+
+function getFullname() {
+
+	$('#fullname').select2({
+		width: 'resolve',
+		placeholder: "Select Student..",
+		allowHtml: true,
+		allowClear: true,
+		tags: false,
+		ajax: {
+			url: 'data/getname-search.php',
+			dataType: 'json',
+			quietMillis: 100,
+			processResults: function (data) {
+				return {
+					results: $.map(data, function (obj) {
+						return { id: obj.sf1_lrn, text: obj.sf1_fullname };
+					})
+				};
+
+			}
+		}
+	});
+}
